@@ -79,10 +79,8 @@
 
 ### Testing
 
-##### Return Calculation Comparison 
+##### Return Calculation Comparison
 <img src="./www/returns.png" alt="drawing" width="500"/>
-<br>
-<br>
 
 ##### Standard Deviation Comparison  
 <img src="./www/stddev.png" alt="drawing" width="500"/>
