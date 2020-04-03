@@ -1,4 +1,4 @@
-# 1888 Management | Code Challenge
+# Code Challenge
 
 - Create a 30-day rolling volatility chart in an R Shiny app. using S&P 500 Index daily returns going back to January 1, 2017.
 - Build functionality in the app to allow an end user to choose among three different lookback periods, the stated 30 day period as well as 10 days and 60 days.  
