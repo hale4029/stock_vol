@@ -13,18 +13,18 @@
   - R development environment
 - [Shinyapps](https://www.shinyapps.io/)
   - Deployment
-- Signifcant Packages:
+- Significant Packages:
   - Shiny
     - Build interactive web apps 
      - rsconnect (Deployment Interface for R Markdown Documents and Shiny Applications)
   - [Quantmod](https://cran.r-project.org/web/packages/quantmod/quantmod.pdf)
-    - Allow app to retrive the ticker's historical daily prices - `getSymbols`
+    - Allow app to retrieve the ticker's historical daily prices - `getSymbols`
     - Create chart - `chartSeries`
   - [PerformanceAnalytics](https://cran.r-project.org/web/packages/PerformanceAnalytics/PerformanceAnalytics.pdf)
     - Calculate portfolio standard deviation - `StdDev`
-      - Rollapply (requried `zoo` package)
+      - Rollapply (required `zoo` package)
   - Glue
-    - String interpulation
+    - String interpolation
     
  ### Code Snippet
  
