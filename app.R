@@ -2,11 +2,11 @@
 #install.packages("quantmod")
 #install.packages("PerformanceAnalytics")
 #install.packages('rsconnect')
+#install.packages("glue")
 library(shiny)
 library(quantmod)
 library(PerformanceAnalytics)
-#library(rsconnect)
-#rsconnect::deployApp('stock-vol')
+library(glue)
 
 # User interface ----
 ui <- fluidPage(
@@ -34,14 +34,7 @@ ui <- fluidPage(
                     "Annualize Volatility", value = FALSE)
       ),
     
-    mainPanel(plotOutput("plot"),
-              br(),
-              br(),
-              br(),
-              h3('Code Snippet'),
-              br(),
-              img(src = "code.png", height = 500, width = 800)
-              )
+    mainPanel(plotOutput("plot"))
     )
 )
 
@@ -69,7 +62,8 @@ server <- function(input, output) {
 
   output$plot <- renderPlot({
     chartSeries(dataInput(), theme = chartTheme("white"),
-                type = "line", log.scale = FALSE, TA = NULL)
+                type = "line", log.scale = FALSE, TA = NULL,
+                name = glue('{input$symb} {input$integer} Day Rolling Volatility (%)'))
   })
   
 }

@@ -5,9 +5,9 @@ account: stock-vol
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2048621
-bundleId: 2962639
+bundleId: 2965601
 url: https://stock-vol.shinyapps.io/stockVis/
-when: 1585886924.71649
+when: 1585938594.35804
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: helpers.R|test_script.R
