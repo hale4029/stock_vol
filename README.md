@@ -8,10 +8,10 @@
   - Setup development environment -- download RStudio via Anaconda
   - Get familiar with R's syntax and functions/methods
   - Research R Shiny
-  - Find simple tutorial(s) producing a similar application
+  - Find a simple tutorial producing a similar application
   - Launch a sample application
-  - Implement new code and test results via RStudio console
-  -
+  - Implement new code and test results within RStudio console
+  - Compare results to the excel data provided using Google Sheets (_using a Mac_)
 
 ### General Resources
 - [RStudio Tutorial - YouTube](https://www.youtube.com/watch?v=mcYcjH-1giM)
@@ -77,5 +77,10 @@
 
 ### Testing
 
-![alt text](returns.png "Return Comparison")
-![alt text](stddev.png "StdDev Comparison")
+##### Return Calculation Comparison 
+<img src="./www/returns.png" alt="drawing" width="500"/>
+<br>
+<br>
+
+##### Standard Deviation Comparison  
+<img src="./www/stddev.png" alt="drawing" width="500"/>
