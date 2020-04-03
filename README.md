@@ -15,12 +15,10 @@
   - Implement new code and test results within RStudio console
   - Compare results to the excel data provided using Google Sheets (_using a Mac_)
 
-### General Resources
+### Technical Resources
 - [RStudio Tutorial - YouTube](https://www.youtube.com/watch?v=mcYcjH-1giM)
 - [Shiny Tutorial](https://shiny.rstudio.com/tutorial/)
 - [R Programming Tutorial - YouTube](https://www.youtube.com/watch?v=_V8eKsto3Ug)
-
-### Technical Resources
 - RStudio
   - R development environment
 - [Shinyapps](https://www.shinyapps.io/)
