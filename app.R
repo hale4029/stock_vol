@@ -34,7 +34,14 @@ ui <- fluidPage(
                     "Annualize Volatility", value = FALSE)
       ),
     
-    mainPanel(plotOutput("plot"))
+    mainPanel(plotOutput("plot"),
+              br(),
+              br(),
+              br(),
+              h3('Code Snippet'),
+              br(),
+              img(src = "code.png", height = 500, width = 800)
+              )
     )
 )
 
@@ -51,11 +58,12 @@ server <- function(input, output) {
     
     window = input$integer
     if (!input$adjust) {
-      spy_rolling_sd <- na.omit(rollapply(asset_returns_xts, window, function(x) round(StdDev(x) * 100, 2)))
+      spy_rolling_sd <- na.omit(rollapply(asset_returns_xts,
+                                window, function(x) round(StdDev(x) * 100, 2)))
     } else {
-      spy_rolling_sd <- na.omit(rollapply(asset_returns_xts, window, function(x) round(StdDev.annualized(x) * 100, 2)))
+      spy_rolling_sd <- na.omit(rollapply(asset_returns_xts,
+                                window, function(x) round(StdDev.annualized(x) * 100, 2)))
     }
-    return(spy_rolling_sd)
   })
   
 
