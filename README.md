@@ -4,7 +4,11 @@
 - Build functionality in the app to allow an end user to choose among three different lookback periods, the stated 30 day period as well as 10 days and 60 days.  
 - Construct chart to a level where information is presentable to an end user. 
 
-### Resources
+### General Resources
+- [Shiny Tutorial](https://shiny.rstudio.com/tutorial/)
+- [R Programming Tutorial - YouTube](https://www.youtube.com/watch?v=_V8eKsto3Ug)
+
+### Technical Resources
 - RStudio
   - R development environment
 - [Shinyapps](https://www.shinyapps.io/)
@@ -16,13 +20,13 @@
   - [Quantmod](https://cran.r-project.org/web/packages/quantmod/quantmod.pdf)
     - Allow app to retrive the ticker's historical daily prices - `getSymbols`
     - Create chart - `chartSeries`
-  - PerformanceAnalytics
+  - [PerformanceAnalytics](https://cran.r-project.org/web/packages/PerformanceAnalytics/PerformanceAnalytics.pdf)
     - Calculate portfolio standard deviation - `StdDev`
       - Rollapply (requried `zoo` package)
   - Glue
     - String interpulation
     
- ### Code Snippet with Comments
+ ### Code Snippet
  
  ````
  ui <- fluidPage(
