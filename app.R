@@ -13,7 +13,7 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       helpText("Select a stock to examine."),
-      textInput("symb", "Symbol", "SPY"),
+      textInput("symb", "Symbol", "GE"),
       
       dateRangeInput("dates",
                      "Date range",
@@ -44,11 +44,14 @@ server <- function(input, output) {
                from = input$dates[1],
                to = input$dates[2],
                auto.assign = FALSE)
+  
+    asset_returns_xts <- na.omit(Return.calculate(data[,4], method = "log"))
+    
     window = input$integer
     if (!input$adjust) {
-      spy_rolling_sd <- na.omit(rollapply(data$SPY.Close, window, function(x) StdDev(x)))
+      spy_rolling_sd <- na.omit(rollapply(asset_returns_xts, window, function(x) round(StdDev(x) * 100, 2)))
     } else {
-      spy_rolling_sd <- na.omit(rollapply(data$SPY.Close, window, function(x) StdDev.annualized(x, scale = 12)))
+      spy_rolling_sd <- na.omit(rollapply(asset_returns_xts, window, function(x) round(StdDev.annualized(x) * 100, 2)))
     }
     return(spy_rolling_sd)
   })
