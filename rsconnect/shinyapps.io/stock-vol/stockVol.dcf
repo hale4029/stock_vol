@@ -1,0 +1,13 @@
+name: stockVol
+title: stockVol
+username:
+account: stock-vol
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2048573
+bundleId: 2962603
+url: https://stock-vol.shinyapps.io/stockVol/
+when: 1585885972.6218
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: helpers.R|test_script.R

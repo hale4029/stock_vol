@@ -1,10 +1,12 @@
 # Load packages ----
 #install.packages("quantmod")
 #install.packages("PerformanceAnalytics")
+#install.packages('rsconnect')
 library(shiny)
 library(quantmod)
 library(PerformanceAnalytics)
-
+#library(rsconnect)
+#rsconnect::deployApp('stock-vol')
 
 # User interface ----
 ui <- fluidPage(
@@ -12,8 +14,8 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      helpText("Select a stock to examine."),
-      textInput("symb", "Symbol", "GE"),
+      helpText("Enter a stock ticker to examine."),
+      textInput("symb", "Symbol", "SPY"),
       
       dateRangeInput("dates",
                      "Date range",
