@@ -1,8 +1,4 @@
 # Load packages ----
-#install.packages("quantmod")
-#install.packages("PerformanceAnalytics")
-#install.packages('rsconnect')
-#install.packages("glue")
 library(shiny)
 library(quantmod)
 library(PerformanceAnalytics)
@@ -19,7 +15,7 @@ ui <- fluidPage(
       
       dateRangeInput("dates",
                      "Date range",
-                     start = "2013-01-01",
+                     start = "2018-01-01",
                      end = as.character(Sys.Date())),
       
       br(),
@@ -47,6 +43,7 @@ server <- function(input, output) {
                to = input$dates[2],
                auto.assign = FALSE)
   
+    #Logarithmic return - Infinite-periods, compounded, continuous.
     asset_returns_xts <- na.omit(Return.calculate(data[,4], method = "log"))
     
     window = input$integer
